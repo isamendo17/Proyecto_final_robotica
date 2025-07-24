@@ -10,7 +10,7 @@
 A manera de bitácora del desarrollo del proyecto. No olviden ser detallados y describir el proceso como quieren que
 sea visto para sus pares.
 
-### Diagrama de flujo de las acciones del robot, con sus respectivas descripciones
+### Diagrama de flujo de las acciones del robot con sus respectivas descripciones
 
 ### Descripción, planos y fotografías del gripper diseñado y sus piezas para el proceso de alistamiento
 
@@ -20,6 +20,8 @@ sea visto para sus pares.
 
 ### Comparación del tiempo de alistamiento manual y de operación automatizada para las combinaciones seleccionadas
 
-### Vídeo tipo presentación con duraci´on entre 10 a 15 minutos, debería incluir el clip de introducción de
-LabSIR, seguido de un banner de la Universidad Nacional de Colombia, autores, profesores, curso, a˜no,
-etc. Intro LabSIR, el v´ıdeo debe incluir:
+### Vídeo tipo presentación con duración entre 10 a 15 minutos
+Debería incluir el clip de introducción de LabSIR, seguido de un banner de la Universidad Nacional de Colombia, autores, profesores, curso, año,
+etc. Intro LabSIR, el vídeo debe incluir:
+- La simulación en en el software predeterminado con líneas de trazado de trayectorias y cálculo del tiempo total de ensamble. Se debe incluir a la simulación los modelos geométricos de la vitrina, espacio de cocción y arepas.
+- Vídeo de implementación del proyecto donde todos los integrantes del grupo participen y expliquen la solución planteada
