@@ -40,7 +40,7 @@ A continuación se adjunta el plano del gripper:
 La siguiente pieza corresponde al acople de unión entre el actuador neumático y la estructura impresa del gripper:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3463745d-144b-4f78-bdea-51ea63d59968" alt="Gripper" width="400"/>
+  <img src="https://github.com/user-attachments/assets/3463745d-144b-4f78-bdea-51ea63d59968" alt="Gripper" width="200"/>
 </p>
 
 Esta placa tiene como función principal asegurar el gripper al extremo móvil del actuador, permitiendo que el movimiento del cilindro se transfiera directamente a los dedos de la pinza. Cuenta con múltiples orificios que permiten:
