@@ -32,7 +32,7 @@ El gripper se puede montar fácilmente al brazo robótico gracias a una base con
 A continuación se adjunta el plano del gripper:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5947d7c0-56a6-42ed-b003-fc083350fe09" alt="Gripper" width="600"/>
+  <img src="https://github.com/user-attachments/assets/5947d7c0-56a6-42ed-b003-fc083350fe09" alt="Gripper" width="400"/>
 </p>
 
 ### Modelo en Software de Simulación predeterminado del entorno robótico con todos los elementos que intervienen en el proceso
