@@ -43,13 +43,17 @@ La siguiente pieza corresponde al acople de unión entre el actuador neumático 
   <img src="https://github.com/user-attachments/assets/3463745d-144b-4f78-bdea-51ea63d59968" alt="Gripper" width="200"/>
 </p>
 
-Esta placa tiene como función principal asegurar el gripper al extremo móvil del actuador, permitiendo que el movimiento del cilindro se transfiera directamente a los dedos de la pinza. Cuenta con múltiples orificios que permiten:
+Esta placa tiene como función principal asegurar el gripper al extremo móvil del actuador, permitiendo que el movimiento del cilindro se transfiera directamente a los dedos de la pinza. Cuenta con múltiples orificios que permiten: La fijación al cuerpo impreso del gripper y el montaje seguro del cilindro neumático mediante tornillos pasantes.
 
-La fijación al cuerpo impreso del gripper.
+2. Estructura de la Pinza (Dedo Curvo)
 
-El montaje seguro del cilindro neumático mediante tornillos pasantes.
+La siguiente pieza representa uno de los dedos curvos del gripper, diseñados especialmente para adaptarse a la forma redondeada de las arepas:
 
-2. 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bcdc13c2-4558-4191-ac87-3d499db97430" alt="Gripper" width="200"/>
+</p>
+
+Este dedo fue fabricado mediante impresión 3D en PLA y tiene un perfil semicircular que permite envolver parcialmente la arepa, brindando un agarre firme y distribuido. La forma curva reduce los puntos de presión directa, evitando que la arepa se deforme o se dañe durante el agarre o traslado. El extremo más recto se conecta con la parte móvil del mecanismo y se articula junto con su par opuesto mediante el movimiento del actuador neumático.
 
 ### Modelo en Software de Simulación predeterminado del entorno robótico con todos los elementos que intervienen en el proceso
 
