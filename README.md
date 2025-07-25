@@ -29,6 +29,12 @@ El gripper está hecho por dos partes principales:
 
 El gripper se puede montar fácilmente al brazo robótico gracias a una base con orificios. En la parte de atrás se encuentran las conexiones para las mangueras de aire comprimido. En la imagen se ve a la izquierda un objeto cilíndrico cubierto con cinta negra, que usamos como arepa de prueba. Nos sirvió para ensayar el agarre, traslado y liberación de las arepas durante todo el proceso. Así validamos que el gripper funciona correctamente en condiciones reales.
 
+A continuación se adjunta el plano del gripper:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5947d7c0-56a6-42ed-b003-fc083350fe09" alt="Gripper" width="600"/>
+</p>
+
 ### Modelo en Software de Simulación predeterminado del entorno robótico con todos los elementos que intervienen en el proceso
 
 ### Código fuente comentado y discutido del módulo utilizado para el desarrollo del proyecto
