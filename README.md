@@ -11,6 +11,10 @@
 A manera de bitácora del desarrollo del proyecto. No olviden ser detallados y describir el proceso como quieren que
 sea visto para sus pares.
 
+### Diagrama de flujo de las acciones del robot con sus respectivas descripciones
+
+### Descripción, planos y fotografías del gripper diseñado y sus piezas para el proceso de alistamiento
+
 Para este proyecto se diseñó un gripper neumático de dos dedos, pensado para agarrar y mover las arepas automáticamente desde la vitrina de almacenamiento hasta la zona de cocción, incluyendo también el volteo y la entrega final.
 
 El gripper está hecho por dos partes principales:
@@ -22,10 +26,6 @@ El gripper está hecho por dos partes principales:
 El gripper se puede montar fácilmente al brazo robótico gracias a una base con orificios. En la parte de atrás se encuentran las conexiones para las mangueras de aire comprimido.
 
 En la imagen se ve a la izquierda un objeto cilíndrico cubierto con cinta negra, que usamos como arepa de prueba. Nos sirvió para ensayar el agarre, traslado y liberación de las arepas durante todo el proceso. Así validamos que el gripper funciona correctamente en condiciones reales.
-
-### Diagrama de flujo de las acciones del robot con sus respectivas descripciones
-
-### Descripción, planos y fotografías del gripper diseñado y sus piezas para el proceso de alistamiento
 
 ### Modelo en Software de Simulación predeterminado del entorno robótico con todos los elementos que intervienen en el proceso
 
