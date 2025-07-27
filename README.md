@@ -8,9 +8,16 @@
 
 ### Descripción de la solución creada, el proceso de alistamiento, herramientas y piezas utilizadas
 
-La solución propuesta consiste en un sistema automatizado para el alistamiento de arepas, integrando un robot industrial Yaskawa con un gripper neumático de dos dedos diseñado por el equipo. El objetivo fue automatizar la toma de las arepas desde una vitrina de almacenamiento hasta su colocación en una parrilla de cocción, como parte del proceso de preparación. El gripper fue diseñado y probado de forma que cumpliera su proposito de agarrar las arepas, y puediera acoplarse con el robot.
+La solución propuesta consiste en un sistema automatizado para el alistamiento de arepas, integrando un robot industrial Yaskawa con un gripper neumático de dos dedos diseñado por el equipo. El objetivo principal fue automatizar la toma de las arepas desde una vitrina de almacenamiento y colocarlas sobre una parrilla de cocción. El gripper fue diseñado para adaptarse a diferentes tamaños de arepa, sujetarlas con firmeza sin dañarlas, y acoplarse correctamente al robot. Durante su fabricación y prueba se validó que cumplía con los requisitos funcionales del proceso.
 
-En la simulación, realizada con RoboDK, se logró ejecutar todo el ciclo: selección de la arepa, traslado, posicionamiento en la parrilla y liberación. Sin embargo, en la implementación física solo se ejecutaron las trayectorias del robot, ya que por razones técnicas no se desmontó el gripper neumático que ya estaba instalado en el robot Yaskawa del laboratorio. Aun así, se verificó que las trayectorias programadas son funcionales y seguras, y que la solución es totalmente viable con el gripper diseñado.
+La simulación completa del sistema fue desarrollada en RoboDK, donde se logró ejecutar todo el ciclo: selección de la arepa, traslado, posicionamiento en la parrilla y liberación. Sin embargo, en la implementación física solo se realizaron las trayectorias del robot, ya que por razones técnicas no se retiró el gripper neumático previamente instalado en el equipo del laboratorio. Aun así, las trayectorias programadas fueron verificadas como funcionales y seguras, demostrando que la solución es totalmente viable con el gripper diseñado por el equipo.
+
+El proceso simulado y programado sigue los siguientes pasos:
+
+1. Se selecciona la arepa.
+2. El robot se desplaza hacia la posición correspondiente en la vitrina de almacenamiento.
+3. El gripper simulado toma la arepa y la traslada hacia la zona de cocción.
+4. Se deposita la arepa en la matriz de cocción.
 
 ### Diagrama de flujo de las acciones del robot con sus respectivas descripciones
 
