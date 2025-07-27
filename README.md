@@ -82,6 +82,34 @@ Este dedo fue fabricado mediante impresión 3D en PLA y tiene un perfil semicirc
 ### Código fuente comentado y discutido del módulo utilizado para el desarrollo del proyecto
 
 ### Comparación del tiempo de alistamiento manual y de operación automatizada para las combinaciones seleccionadas
+Para evaluar la eficiencia de la solución automatizada frente al proceso tradicional manual, se realizó una comparación de tiempos tomando como referencia las etapas principales del alistamiento de las arepas: selección, agarre, desplazamiento y colocación sobre la parrilla de cocción.
+
+| Actividad                                      | Proceso Manual (promedio) | Proceso Automatizado (simulación RoboDK) |
+| ---------------------------------------------- | ------------------------- | ---------------------------------------- |
+| **Alistamiento inicial del sistema**           | 5 s                       | 15 s                                     |
+| Identificación y selección de la arepa         | 5 s                       | 1 s                                      |
+| Toma del producto y desplazamiento             | 8 s                       | 5 s                                      |
+| Colocación sobre la parrilla                   | 4 s                       | 2 s                                      |
+| **Tiempo total por arepa (post-alistamiento)** | **17 s**                  | **8 s**                                  |
+
+Análisis:
+- Tiempo de alistamiento inicial: El sistema automatizado requiere una configuración previa más extensa (calibración, carga de programa, alineación del gripper, etc.), lo cual lo hace más lento en el arranque comparado con el proceso manual, que puede empezar casi de inmediato.
+
+- Ciclo operativo (por cada arepa): Una vez en funcionamiento, el robot supera ampliamente al método manual. Ejecuta con mayor precisión y repetitividad las tareas programadas, disminuyendo a más de la mitad el tiempo por unidad.
+
+- Eficiencia en cadena: Cuando se considera una producción continua o por lotes (por ejemplo, 10 o más arepas), el alistamiento inicial del robot se diluye en el total del proceso, y el sistema automatizado se vuelve claramente más rápido y eficiente.
+
+Por ejemplo se tiene el ejemplo de la realización de 10 arepas.
+
+| Proceso      | Tiempo Total Estimado                     |
+| ------------ | ----------------------------------------- |
+| Manual       | 10 × 17 s = **170 s**                     |
+| Automatizado | 15 s (alistamiento) + 10 × 8 s = **95 s** |
+
+
+En conclusión, aunque el sistema automatizado tiene un alistamiento inicial más lento, su desempeño a escala lo hace mucho más eficiente que el proceso manual. Esto demuestra que para procesos repetitivos y de producción en cadena, la automatización no solo reduce el tiempo operativo, sino que también mejora la precisión, higiene y estandarización del producto final.
+
+
 
 ### Vídeo tipo presentación con duración entre 10 a 15 minutos
 Debería incluir el clip de introducción de LabSIR, seguido de un banner de la Universidad Nacional de Colombia, autores, profesores, curso, año,
