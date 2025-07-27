@@ -8,8 +8,11 @@
 
 ### Descripción de la solución creada, el proceso de alistamiento, herramientas y piezas utilizadas
 
-A manera de bitácora del desarrollo del proyecto. No olviden ser detallados y describir el proceso como quieren que
-sea visto para sus pares.
+La solución propuesta consiste en un sistema automatizado para el alistamiento de arepas, integrando un robot industrial Yaskawa con un gripper neumático de dos dedos diseñado por el equipo. El objetivo fue automatizar la toma de las arepas desde una vitrina de almacenamiento hasta su colocación en una parrilla de cocción, como parte del proceso de preparación.
+
+El gripper fue diseñado y probado de forma independiente, y se integró completamente en el modelo simulado. En la simulación, realizada con el software correspondiente, se logró ejecutar todo el ciclo: selección de la arepa, traslado, posicionamiento en la parrilla y liberación. Sin embargo, en la implementación física solo se ejecutaron las trayectorias del robot, ya que por razones técnicas no se desmontó el gripper neumático que ya venía instalado en el robot Yaskawa del laboratorio.
+
+Aun así, se verificó que las trayectorias programadas son funcionales y seguras, y que la solución es totalmente viable con el gripper diseñado.
 
 ### Diagrama de flujo de las acciones del robot con sus respectivas descripciones
 
