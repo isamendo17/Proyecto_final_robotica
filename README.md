@@ -8,6 +8,10 @@
 
 ### Descripción de la solución creada, el proceso de alistamiento, herramientas y piezas utilizadas
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e89ae91d-e61f-4ee9-9377-9af222923d6c" alt="Gripper" width="400"/>
+</p>
+
 La solución propuesta consiste en un sistema automatizado para el alistamiento de arepas, integrando un robot industrial Yaskawa con un gripper neumático de dos dedos diseñado por el equipo. El objetivo principal fue automatizar la toma de las arepas desde una vitrina de almacenamiento y colocarlas sobre una parrilla de cocción. El gripper fue diseñado para adaptarse a diferentes tamaños de arepa, sujetarlas con firmeza sin dañarlas, y acoplarse correctamente al robot. Durante su fabricación y prueba se validó que cumplía con los requisitos funcionales del proceso.
 
 La simulación completa del sistema fue desarrollada en RoboDK, donde se logró ejecutar todo el ciclo: selección de la arepa, traslado, posicionamiento en la parrilla y liberación. Sin embargo, en la implementación física solo se realizaron las trayectorias del robot, ya que por razones técnicas no se retiró el gripper neumático previamente instalado en el equipo del laboratorio. Aun así, las trayectorias programadas fueron verificadas como funcionales y seguras, demostrando que la solución es totalmente viable con el gripper diseñado por el equipo.
