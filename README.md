@@ -99,17 +99,14 @@ Análisis:
 
 - Eficiencia en cadena: Cuando se considera una producción continua o por lotes (por ejemplo, 10 o más arepas), el alistamiento inicial del robot se diluye en el total del proceso, y el sistema automatizado se vuelve claramente más rápido y eficiente.
 
-Por ejemplo se tiene el ejemplo de la realización de 10 arepas.
+Por ejemplo se tiene la realización de 10 arepas.
 
 | Proceso      | Tiempo Total Estimado                     |
 | ------------ | ----------------------------------------- |
 | Manual       | 10 × 17 s = **170 s**                     |
 | Automatizado | 15 s (alistamiento) + 10 × 8 s = **95 s** |
 
-
 En conclusión, aunque el sistema automatizado tiene un alistamiento inicial más lento, su desempeño a escala lo hace mucho más eficiente que el proceso manual. Esto demuestra que para procesos repetitivos y de producción en cadena, la automatización no solo reduce el tiempo operativo, sino que también mejora la precisión, higiene y estandarización del producto final.
-
-
 
 ### Vídeo tipo presentación con duración entre 10 a 15 minutos
 Debería incluir el clip de introducción de LabSIR, seguido de un banner de la Universidad Nacional de Colombia, autores, profesores, curso, año,
