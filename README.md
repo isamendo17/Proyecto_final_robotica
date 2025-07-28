@@ -42,7 +42,7 @@ flowchart TD
     C --> D[Preparar entorno: validar frame y objeto Arepa1, configurar frame MESA]
     D --> E[Recoger arepa de la mesa]
     E --> F[Colocar arepa en la primera parrilla - Pan1]
-    F --> G[Regresar, recoger de nuevo y rotar eje 6]
+    F --> G[Regresar, recoger de nuevo y rotar eje]
     G --> H[Colocar arepa en la segunda parrilla - Pan2]
     H --> I[Regreso a HOME y restablecer frame original]
     I --> J[Fin del proceso]
