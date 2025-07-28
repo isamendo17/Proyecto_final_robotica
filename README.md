@@ -94,7 +94,168 @@ Este dedo fue fabricado mediante impresión 3D en PLA y tiene un perfil semicirc
 
 ### Código fuente comentado y discutido del módulo utilizado para el desarrollo del proyecto
 
+```python
+from robodk.robolink import *    # API para comunicarse con RoboDK
+from robodk.robomath import *    # Funciones de álgebra y transformaciones
+import math
+
+#----------------------------------------------
+# 1) Conexión a RoboDK e inicialización del robot
+#----------------------------------------------
+
+RDK = Robolink()
+
+# Seleccionar un robot manualmente si hay más de uno en la estación
+robot = RDK.ItemUserPick("Selecciona un robot", ITEM_TYPE_ROBOT)
+
+# Cargar el gripper
+gripper_name = "Gripper v7"
+gripper = RDK.Item(gripper_name, ITEM_TYPE_TOOL)
+if not gripper.Valid():
+    raise Exception(f'No se encontró el gripper "{gripper_name}" en la estación.')
+
+robot.setTool(gripper)
+
+#----------------------------------------------
+# 2) Configuración inicial: HOME y parámetros básicos
+#----------------------------------------------
+
+frame_name2 = "HOME"
+frame2 = RDK.Item(frame_name2, ITEM_TYPE_FRAME)
+if not frame2.Valid():
+    raise Exception(f'No se encontró el Frame "{frame_name2}" en la estación.')
+
+robot.setPoseFrame(frame2)
+robot.setPoseTool(robot.PoseTool())
+robot.setSpeed(300)   # Velocidad en mm/s
+robot.setRounding(5)  # Blending en mm
+
+robot.MoveL(transl(0, 0, 0))  # Moverse a posición base de HOME
+
+#----------------------------------------------
+# 3) Validar elementos necesarios para el proceso
+#----------------------------------------------
+
+# Frame y objeto de la arepa
+frame_Arepa1 = "FrameArepa1"
+frameArepa1 = RDK.Item(frame_Arepa1, ITEM_TYPE_FRAME)
+if not frameArepa1.Valid():
+    raise Exception(f'No se encontró el Frame "{frame_Arepa1}" en la estación.')
+
+arepa = RDK.Item("Arepa1", ITEM_TYPE_OBJECT)
+if not arepa.Valid():
+    raise Exception('No se encontró el objeto "Arepa1" en la estación.')
+
+# Frame de la mesa
+frame_name = "MESA"
+frame = RDK.Item(frame_name, ITEM_TYPE_FRAME)
+if not frame.Valid():
+    raise Exception(f'No se encontró el Frame "{frame_name}" en la estación.')
+
+robot.setPoseFrame(frame)
+robot.setPoseTool(robot.PoseTool())
+robot.setSpeed(300)
+robot.setRounding(5)
+
+#----------------------------------------------
+# 4) Recoger la arepa desde la mesa
+#----------------------------------------------
+
+robot.MoveL(transl(-100, 0, -50))       # Posicionarse sobre la mesa
+robot.MoveL(transl(-100, 140, -50))     # Movimiento lateral
+robot.MoveL(transl(70, 140, -50))       # Posicionarse cerca de la arepa
+robot.MoveL(transl(70, 140, 0))         # Bajar al nivel de la arepa
+arepa.setParent(gripper)               # Agarrar la arepa
+robot.MoveL(transl(70, 140, -50))       # Levantar
+robot.MoveL(transl(-100, 140, -50))     # Alejarse
+
+#----------------------------------------------
+# 5) Colocar la arepa en la primera parrilla
+#----------------------------------------------
+
+frame_Pan1 = "FramePan1"
+framePan1 = RDK.Item(frame_Pan1, ITEM_TYPE_FRAME)
+if not framePan1.Valid():
+    raise Exception(f'No se encontró el Frame "{frame_Pan1}" en la estación.')
+
+robot.setPoseFrame(framePan1)
+robot.setPoseTool(robot.PoseTool())
+robot.setSpeed(300)
+robot.setRounding(5)
+
+robot.MoveL(transl(-270, 0, -50))
+robot.MoveL(transl(0, 0, -50))
+robot.MoveL(transl(0, 0, 0))
+arepa.setParent(framePan1)             # Soltar arepa en la primera parrilla
+robot.MoveL(transl(0, 0, -50))
+robot.MoveL(transl(-270, 0, -50))
+
+#----------------------------------------------
+# 6) Volver a HOME
+#----------------------------------------------
+
+frame2 = RDK.Item("HOME", ITEM_TYPE_FRAME)
+robot.setPoseFrame(frame2)
+robot.setPoseTool(robot.PoseTool())
+robot.setSpeed(300)
+robot.setRounding(5)
+robot.MoveJ(transl(0, 0, 0))
+
+#----------------------------------------------
+# 7) Recoger la arepa nuevamente para rotarla
+#----------------------------------------------
+
+robot.setPoseFrame(framePan1)
+robot.setPoseTool(robot.PoseTool())
+robot.setSpeed(300)
+robot.setRounding(5)
+
+robot.MoveL(transl(-270, 0, -50))
+robot.MoveL(transl(0, 0, -50))
+robot.MoveL(transl(0, 0, 0))
+arepa.setParent(gripper)
+robot.MoveL(transl(0, 0, -200))
+
+# Rotar el eje 6 del robot 180 grados
+joints_actuales = robot.Joints().list()
+joints_actuales[5] += 180
+robot.MoveJ(joints_actuales)
+
+#----------------------------------------------
+# 8) Colocar la arepa en la segunda parrilla
+#----------------------------------------------
+
+frame_Pan2 = "FramePan2"
+framePan2 = RDK.Item(frame_Pan2, ITEM_TYPE_FRAME)
+if not framePan2.Valid():
+    raise Exception(f'No se encontró el Frame "{frame_Pan2}" en la estación.')
+
+robot.setPoseFrame(framePan2)
+robot.setPoseTool(robot.PoseTool())
+robot.setSpeed(300)
+robot.setRounding(5)
+
+robot.MoveL(transl(0, 0, 200))
+robot.MoveL(transl(0, 0, 0))
+arepa.setParent(framePan2)            # Soltar arepa en la segunda parrilla
+robot.MoveL(transl(0, 0, 200))
+
+#----------------------------------------------
+# 9) Finalización: volver a HOME y restaurar frame
+#----------------------------------------------
+
+robot.setPoseFrame(frame2)
+robot.setPoseTool(robot.PoseTool())
+robot.setSpeed(300)
+robot.setRounding(5)
+robot.MoveJ(transl(0, 0, 0))
+
+# Restaurar jerarquía de la arepa
+arepa.setParent(frameArepa1)
+```
+
 ### Comparación del tiempo de alistamiento manual y de operación automatizada para las combinaciones seleccionadas
+
 Para evaluar la eficiencia de la solución automatizada frente al proceso tradicional manual, se realizó una comparación de tiempos tomando como referencia las etapas principales del alistamiento de las arepas: selección, agarre, desplazamiento y colocación sobre la parrilla de cocción.
 
 | Actividad                                      | Proceso Manual (promedio) | Proceso Automatizado (simulación RoboDK) |
