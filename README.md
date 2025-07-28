@@ -35,36 +35,32 @@ El proceso simulado y programado sigue los siguientes pasos:
 
 ### Diagrama de flujo de las acciones del robot con sus respectivas descripciones
 
+```mermaid
 flowchart TD
-    A[Inicio del script<br>Conexión a RoboDK] --> B[Selección del robot<br>y del gripper]
-    B --> C[Verificación de existencia y validez<br>del gripper y del frame HOME]
-    C --> D[Configuración inicial:<br>Frame, herramienta, velocidad y blending]
-    D --> E[Movimiento inicial a posición HOME]
-    
-    E --> F[Verificación de existencia del FrameArepa1 y del objeto Arepa1]
-    F --> G[Configuración del Frame MESA y parámetros]
-    G --> H[Movimiento hacia ubicación de la arepa<br>(MESA)]
-    H --> I[Agarre de la arepa<br>setParent(gripper)]
-    
-    I --> J[Movimiento hacia ubicación de la parrilla 1<br>(FramePan1)]
-    J --> K[Soltar arepa sobre la parrilla<br>setParent(framePan1)]
-    
-    K --> L[Retorno a posición HOME]
-    L --> M[Segundo agarre de la arepa<br>(desde parrilla 1)]
-    M --> N[Rotación de muñeca en eje 6 (+180°)]
-    
-    N --> O[Movimiento hacia la segunda parrilla<br>(FramePan2)]
-    O --> P[Soltar arepa sobre la segunda parrilla<br>setParent(framePan2)]
-    
-    P --> Q[Retorno final a posición HOME]
-    Q --> R[Reset del estado de la arepa:<br>setParent(FrameArepa1)]
-    R --> S[Fin del proceso]
+    A[Inicio: Conexión a RoboDK] --> B[Seleccionar robot y gripper]
+    B --> C[Validar gripper y frame HOME]
+    C --> D[Configurar herramienta, frame, velocidad y blending]
+    D --> E[Mover a posición HOME]
 
-    style A fill:#f9f,stroke:#333,stroke-width:1px
-    style S fill:#bbf,stroke:#333,stroke-width:1px
-    style I fill:#cfc,stroke:#333,stroke-width:1px
-    style K fill:#cfc,stroke:#333,stroke-width:1px
-    style P fill:#cfc,stroke:#333,stroke-width:1px
+    E --> F[Validar FrameArepa1 y objeto Arepa1]
+    F --> G[Configurar frame MESA]
+    G --> H[Mover hacia la arepa]
+    H --> I[Agarra arepa (setParent(gripper))]
+
+    I --> J[Mover a parrilla 1 (FramePan1)]
+    J --> K[Soltar arepa (setParent(FramePan1))]
+
+    K --> L[Volver a HOME]
+    L --> M[Recoger arepa de parrilla 1]
+    M --> N[Rotar eje 6 (+180°)]
+
+    N --> O[Ir a parrilla 2 (FramePan2)]
+    O --> P[Soltar arepa (setParent(FramePan2))]
+
+    P --> Q[Volver a HOME]
+    Q --> R[Restablecer referencia (setParent(FrameArepa1))]
+    R --> S[Fin]
+```
 
 ### Descripción, planos y fotografías del gripper diseñado y sus piezas para el proceso de alistamiento
 
