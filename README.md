@@ -42,24 +42,24 @@ flowchart TD
     C --> D[Configurar herramienta, frame, velocidad y blending]
     D --> E[Mover a posición HOME]
 
-    E --> F[Validar FrameArepa1 y objeto Arepa1]
+    E --> F[Validar frame Arepa1 y objeto Arepa1]
     F --> G[Configurar frame MESA]
-    G --> H[Mover hacia la arepa]
-    H --> I[Agarra arepa (setParent(gripper))]
+    G --> H[Mover hacia posición de la arepa]
+    H --> I[Agarra la arepa con el gripper]
 
-    I --> J[Mover a parrilla 1 (FramePan1)]
-    J --> K[Soltar arepa (setParent(FramePan1))]
+    I --> J[Mover a la primera parrilla - frame Pan1]
+    J --> K[Soltar la arepa sobre la parrilla]
 
-    K --> L[Volver a HOME]
-    L --> M[Recoger arepa de parrilla 1]
-    M --> N[Rotar eje 6 (+180°)]
+    K --> L[Volver a posición HOME]
+    L --> M[Recoger la arepa nuevamente]
+    M --> N[Rotar eje 6 del robot +180 grados]
 
-    N --> O[Ir a parrilla 2 (FramePan2)]
-    O --> P[Soltar arepa (setParent(FramePan2))]
+    N --> O[Mover a la segunda parrilla - frame Pan2]
+    O --> P[Soltar la arepa sobre la segunda parrilla]
 
     P --> Q[Volver a HOME]
-    Q --> R[Restablecer referencia (setParent(FrameArepa1))]
-    R --> S[Fin]
+    Q --> R[Restablecer frame de la arepa a FrameArepa1]
+    R --> S[Fin del proceso]
 ```
 
 ### Descripción, planos y fotografías del gripper diseñado y sus piezas para el proceso de alistamiento
