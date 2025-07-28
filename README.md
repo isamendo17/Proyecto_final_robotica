@@ -95,7 +95,7 @@ Para observar el modelo en software, se agrega una carpeta la cual contiene el p
 
 <p align="center">
   <a href="./PROYECTO">
-    <img src="https://github.com/user-attachments/assets/6662a400-f384-46a8-977a-d9c809d1a4c0" alt="Gripper" width="800"/>
+    <img src="https://github.com/user-attachments/assets/6662a400-f384-46a8-977a-d9c809d1a4c0" alt="Gripper" width="650"/>
   </a>
 </p>
 
