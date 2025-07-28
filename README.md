@@ -35,31 +35,16 @@ El proceso simulado y programado sigue los siguientes pasos:
 
 ### Diagrama de flujo de las acciones del robot con sus respectivas descripciones
 
-```mermaid
 flowchart TD
-    A[Inicio: Conexión a RoboDK] --> B[Seleccionar robot y gripper]
-    B --> C[Validar gripper y frame HOME]
-    C --> D[Configurar herramienta, frame, velocidad y blending]
-    D --> E[Mover a posición HOME]
-
-    E --> F[Validar frame Arepa1 y objeto Arepa1]
-    F --> G[Configurar frame MESA]
-    G --> H[Mover hacia posición de la arepa]
-    H --> I[Agarra la arepa con el gripper]
-
-    I --> J[Mover a la primera parrilla - frame Pan1]
-    J --> K[Soltar la arepa sobre la parrilla]
-
-    K --> L[Volver a posición HOME]
-    L --> M[Recoger la arepa nuevamente]
-    M --> N[Rotar eje 6 del robot +180 grados]
-
-    N --> O[Mover a la segunda parrilla - frame Pan2]
-    O --> P[Soltar la arepa sobre la segunda parrilla]
-
-    P --> Q[Volver a HOME]
-    Q --> R[Restablecer frame de la arepa a FrameArepa1]
-    R --> S[Fin del proceso]
+    A[Inicio: Conexión a RoboDK] --> B[Selección y validación del robot, gripper y frames]
+    B --> C[Configuración inicial: herramienta, velocidad, blending, posición HOME]
+    C --> D[Preparar entorno: validar frame y objeto Arepa1, configurar frame MESA]
+    D --> E[Recoger arepa de la mesa]
+    E --> F[Colocar arepa en la primera parrilla (Pan1)]
+    F --> G[Regresar, recoger de nuevo y rotar eje 6]
+    G --> H[Colocar arepa en la segunda parrilla (Pan2)]
+    H --> I[Regreso a HOME y restablecer frame original]
+    I --> J[Fin del proceso]
 ```
 
 ### Descripción, planos y fotografías del gripper diseñado y sus piezas para el proceso de alistamiento
