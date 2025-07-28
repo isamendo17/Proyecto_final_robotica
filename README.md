@@ -295,3 +295,5 @@ Debería incluir el clip de introducción de LabSIR, seguido de un banner de la 
 etc. Intro LabSIR, el vídeo debe incluir:
 - La simulación en en el software predeterminado con líneas de trazado de trayectorias y cálculo del tiempo total de ensamble. Se debe incluir a la simulación los modelos geométricos de la vitrina, espacio de cocción y arepas.
 - Vídeo de implementación del proyecto donde todos los integrantes del grupo participen y expliquen la solución planteada
+[![Watch the video](https://img.youtube.com/vi/pZ8izMtvlJU/maxresdefault.jpg)](https://youtu.be/pZ8izMtvlJU)
+https://youtu.be/pZ8izMtvlJU
