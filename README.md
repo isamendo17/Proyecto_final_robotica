@@ -91,6 +91,14 @@ La siguiente pieza representa uno de los dedos curvos del gripper, diseñados es
 Este dedo fue fabricado mediante impresión 3D en PLA y tiene un perfil semicircular que permite envolver parcialmente la arepa, brindando un agarre firme y distribuido. La forma curva reduce los puntos de presión directa, evitando que la arepa se deforme o se dañe durante el agarre o traslado. El extremo más recto se conecta con la parte móvil del mecanismo y se articula junto con su par opuesto mediante el movimiento del actuador neumático.
 
 ### Modelo en Software de Simulación predeterminado del entorno robótico con todos los elementos que intervienen en el proceso
+Para observar el modelo en software, se agrega una carpeta la cual contiene el proyecto. Si se quiere visualizar o descargar, puede hacer clic en la siguiente imagen.
+
+<p align="center">
+  <a href="./PROYECTO">
+    <img src="https://github.com/user-attachments/assets/6662a400-f384-46a8-977a-d9c809d1a4c0" alt="Gripper" width="200"/>
+  </a>
+</p>
+
 
 ### Código fuente comentado y discutido del módulo utilizado para el desarrollo del proyecto
 
