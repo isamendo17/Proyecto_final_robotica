@@ -35,6 +35,7 @@ El proceso simulado y programado sigue los siguientes pasos:
 
 ### Diagrama de flujo de las acciones del robot con sus respectivas descripciones
 
+```mermaid
 flowchart TD
     A[Inicio: Conexión a RoboDK] --> B[Selección y validación del robot, gripper y frames]
     B --> C[Configuración inicial: herramienta, velocidad, blending, posición HOME]
