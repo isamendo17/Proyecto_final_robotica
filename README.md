@@ -290,10 +290,6 @@ Por ejemplo se tiene la realización de 10 arepas.
 
 En conclusión, aunque el sistema automatizado tiene un alistamiento inicial más lento, su desempeño a escala lo hace mucho más eficiente que el proceso manual. Esto demuestra que para procesos repetitivos y de producción en cadena, la automatización no solo reduce el tiempo operativo, sino que también mejora la precisión, higiene y estandarización del producto final.
 
-### Vídeo tipo presentación con duración entre 10 a 15 minutos
-Debería incluir el clip de introducción de LabSIR, seguido de un banner de la Universidad Nacional de Colombia, autores, profesores, curso, año,
-etc. Intro LabSIR, el vídeo debe incluir:
-- La simulación en en el software predeterminado con líneas de trazado de trayectorias y cálculo del tiempo total de ensamble. Se debe incluir a la simulación los modelos geométricos de la vitrina, espacio de cocción y arepas.
-- Vídeo de implementación del proyecto donde todos los integrantes del grupo participen y expliquen la solución planteada
+### Vídeo
 [![Watch the video](https://img.youtube.com/vi/pZ8izMtvlJU/maxresdefault.jpg)](https://youtu.be/pZ8izMtvlJU)
 https://youtu.be/pZ8izMtvlJU
