@@ -55,7 +55,7 @@ flowchart TD
     
     %% Sensores e interfaz
     C --> D[Interfaz de usuario: Pantalla y botones]
-    D -- C
+    D --> C
     C --> E[Sensores de temperatura]
     
     %% Control térmico
