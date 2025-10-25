@@ -50,11 +50,10 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    %% Entrada de energía
-    A[Energización del sistema 110VAC → 24V DC] --> B[Gestión eléctrica y distribución de energía]
+    A[Energización del sistema 110VAC a 24V] --> B[Gestión eléctrica y distribución de energía]
     B --> C[Control central / Microcontrolador]
     
-    %% Interfaz y sensores
+    %% Sensores e interfaz
     C --> D[Interfaz de usuario: Pantalla y botones]
     C --> E[Sensores de temperatura]
     
@@ -65,13 +64,12 @@ flowchart TD
     
     %% Purificación de aire
     C --> H[Sistema de ventilación y recirculación]
-    H --> I[Filtrado de aire: Prefiltro + Carbón activado + (opcional HEPA)]
+    H --> I[Filtrado de aire: Carbón activado]
     I --> J[Salida o recirculación de aire purificado hacia la cámara]
-    J --> C
     
     %% Seguridad y alarmas
     C --> K[Supervisión de fallos: Sobretemperatura, ventilador, filtros]
-    K --> L[Alarmas visuales y sonoras / Registro de eventos]
+    K --> L[Alarmas visuales/sonoras y registro de eventos]
 ```
 
 ### Descripción, planos y fotografías del gripper diseñado y sus piezas para el proceso de alistamiento
