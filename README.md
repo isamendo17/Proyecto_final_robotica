@@ -54,22 +54,22 @@ flowchart TD
     B --> C[Control central / Microcontrolador]
     
     %% Sensores e interfaz
-    C --> D[Sensores de temperatura y calidad del aire]
-    C --> E[Interfaz de usuario: pantalla, botones o conexión inalámbrica]
+    C --> D[Interfaz de usuario: Pantalla y botones]
+    C --> E[Sensores de temperatura]
     
     %% Control térmico
-    D --> F[Control térmico: activación de elemento calefactor o disipador]
+    E --> F[Control térmico: Activación de elemento calefactor o disipador]
     F --> G[Monitoreo de temperatura en cámara de impresión]
     G --> C
     
     %% Purificación de aire
-    D --> H[Sistema de ventilación y recirculación]
-    H --> I[Filtrado de aire: prefiltro → carbón activado → HEPA]
+    E --> H[Sistema de ventilación y recirculación]
+    H --> I[Filtrado de aire: Carbón activado]
     I --> J[Salida o recirculación de aire purificado hacia la cámara]
     J --> C
     
     %% Seguridad y alarmas
-    C --> K[Supervisión de fallos: sobretemperatura, ventilador, filtros]
+    C --> K[Supervisión de fallos: Sobretemperatura, ventilador, filtros]
     K --> L[Alarmas visuales/sonoras y registro de eventos]
     
     %% Cierre
