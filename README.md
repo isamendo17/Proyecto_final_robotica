@@ -71,9 +71,6 @@ flowchart TD
     %% Seguridad y alarmas
     C --> K[Supervisión de fallos: Sobretemperatura, ventilador, filtros]
     K --> L[Alarmas visuales/sonoras y registro de eventos]
-    
-    %% Cierre
-    L --> M[Fin del proceso / Modo seguro o standby]
 ```
 
 ### Descripción, planos y fotografías del gripper diseñado y sus piezas para el proceso de alistamiento
