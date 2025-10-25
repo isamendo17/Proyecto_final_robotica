@@ -48,6 +48,34 @@ flowchart TD
     I --> J[Fin del proceso]
 ```
 
+```mermaid
+flowchart TD
+    A[Inicio: Energización del sistema 110VAC] --> B[Gestión eléctrica y distribución de energía]
+    B --> C[Control central / Microcontrolador]
+    
+    %% Sensores e interfaz
+    C --> D[Sensores de temperatura y calidad del aire]
+    C --> E[Interfaz de usuario: pantalla, botones o conexión inalámbrica]
+    
+    %% Control térmico
+    D --> F[Control térmico: activación de elemento calefactor o disipador]
+    F --> G[Monitoreo de temperatura en cámara de impresión]
+    G --> C
+    
+    %% Purificación de aire
+    D --> H[Sistema de ventilación y recirculación]
+    H --> I[Filtrado de aire: prefiltro → carbón activado → HEPA]
+    I --> J[Salida o recirculación de aire purificado hacia la cámara]
+    J --> C
+    
+    %% Seguridad y alarmas
+    C --> K[Supervisión de fallos: sobretemperatura, ventilador, filtros]
+    K --> L[Alarmas visuales/sonoras y registro de eventos]
+    
+    %% Cierre
+    L --> M[Fin del proceso / Modo seguro o standby]
+```
+
 ### Descripción, planos y fotografías del gripper diseñado y sus piezas para el proceso de alistamiento
 
 Para este proyecto se diseñó un gripper neumático de dos dedos, pensado para agarrar y mover las arepas automáticamente desde la vitrina de almacenamiento hasta la zona de cocción, incluyendo también el volteo y la entrega final.
