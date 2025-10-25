@@ -58,8 +58,8 @@ flowchart TD
     C --> E[Sensores de temperatura]
     
     %% Control térmico
-    E --> F[Control térmico: Activación de elemento calefactor o disipador]
-    F --> G[Monitoreo de temperatura en cámara de impresión]
+    E --> F[Monitoreo de temperatura en cámara de impresión]
+    F --> G[Control térmico: Activación de elemento calefactor o disipador]
     G --> C
     
     %% Purificación de aire
