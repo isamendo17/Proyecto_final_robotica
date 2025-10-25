@@ -66,7 +66,6 @@ flowchart TD
     C --> H[Sistema de ventilación y recirculación]
     H --> I[Filtrado de aire: Carbón activado]
     I --> J[Salida o recirculación de aire purificado hacia la cámara]
-    J --> C
     
     %% Seguridad y alarmas
     C --> K[Supervisión de fallos: Sobretemperatura, ventilador, filtros]
