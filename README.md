@@ -55,6 +55,7 @@ flowchart TD
     
     %% Sensores e interfaz
     C --> D[Interfaz de usuario: Pantalla y botones]
+    D -- C
     C --> E[Sensores de temperatura]
     
     %% Control térmico
@@ -69,6 +70,7 @@ flowchart TD
     
     %% Seguridad y alarmas
     C --> K[Supervisión de fallos: Sobretemperatura, ventilador, filtros]
+    K --> C
     K --> L[Alarmas visuales/sonoras y registro de eventos]
 ```
 
