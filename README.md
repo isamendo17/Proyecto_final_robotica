@@ -63,7 +63,7 @@ flowchart TD
     G --> C
     
     %% Purificación de aire
-    E --> H[Sistema de ventilación y recirculación]
+    C --> H[Sistema de ventilación y recirculación]
     H --> I[Filtrado de aire: Carbón activado]
     I --> J[Salida o recirculación de aire purificado hacia la cámara]
     J --> C
