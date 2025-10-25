@@ -61,13 +61,13 @@ flowchart TD
     %% Control térmico
     E --> F[Monitoreo de temperatura en cámara de impresión]
     F --> G[Control térmico: Activación de elemento calefactor o disipador]
-    G --> C  %% Retroalimentación al control central
+    G --> C
     
     %% Purificación de aire
     C --> H[Sistema de ventilación y recirculación]
     H --> I[Filtrado de aire: Prefiltro + Carbón activado + (opcional HEPA)]
     I --> J[Salida o recirculación de aire purificado hacia la cámara]
-    J --> C  %% Retroalimentación de estado / monitoreo
+    J --> C
     
     %% Seguridad y alarmas
     C --> K[Supervisión de fallos: Sobretemperatura, ventilador, filtros]
