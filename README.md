@@ -50,7 +50,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A[Inicio: Energización del sistema 110VAC] --> B[Gestión eléctrica y distribución de energía]
+    A[Energización del sistema 110VAC a 24V] --> B[Gestión eléctrica y distribución de energía]
     B --> C[Control central / Microcontrolador]
     
     %% Sensores e interfaz
